@@ -27,6 +27,8 @@ PlotFASToutput({'./current/5MW_OC4Semi-firstonly/FASTSim/fast_driver_fixed_no_of
 PlotFASToutput({'./current/5MW_OC4Semi-firstonly/FASTSim/fast_driver_fixed_w_surge.out','./original/5MW_OC4Semi-firstonly/FASTSim/fast_driver_fixed_w_surge.out'},{'Current','Original'});
 %% Verify New code is different from original code for the OC4 Semi when ElastoDyn has Platform DOF free and there is an initial 5m Surge offset
 PlotFASToutput({'./current/5MW_OC4Semi-firstonly/FASTSim/fast_driver.out','./original/5MW_OC4Semi-firstonly/FASTSim/fast_driver.out'},{'Current','Original'});
+%% Verify New code matches original code for the OC4 Semi when ElastoDyn has Platform DOF fixed and there is an initial 5m Surge offset, and ExctnDisp = WaveDisp = 0 for the current model
+PlotFASToutput({'./current/5MW_OC4Semi-firstonly/FASTSim/fast_driver_noWEIS.out','./original/5MW_OC4Semi-firstonly/FASTSim/fast_driver.out'},{'Current','Original'});
 %% WAMIT Models HERE
 PlotFASToutput({'./current/NBodyMod1/NBodyMod1.HD.out','./original/NBodyMod1/NBodyMod1.HD.out'},{'Current','Original'});
 PlotFASToutput({'./current/NBodyMod2/NBodyMod2.HD.out','./original/NBodyMod2/NBodyMod2.HD.out'},{'Current','Original'});

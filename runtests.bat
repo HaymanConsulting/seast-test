@@ -10,6 +10,7 @@ chdir "../FASTSim"
 "../../bin/openfast_x64.exe" "./fast_driver.fst"
 "../../bin/openfast_x64.exe" "./fast_driver_fixed_no_offset.fst"
 "../../bin/openfast_x64.exe" "./fast_driver_fixed_w_surge.fst"
+"../../bin/openfast_x64.exe" "./fast_driver_noWEIS.fst"
 chdir "../../.."  REM move back up to top-level folder
 GOTO FINISH
 
