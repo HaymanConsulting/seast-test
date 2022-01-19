@@ -1,0 +1,26 @@
+Verification
+-------------
+
+Using Current SeaState Driver and Original HD Driver
+----------------------------------------------------
+1) The WaveElev.out files should be identical for both 1st order only and 1st + 2nd order cases
+	a) 1st Order only Result: match, but fixed issue with precision of time data values, PASS
+	b) Plus 2nd Order Result: match, PASS
+
+2) Compare 5MW_OC4Semi-firstonly [1st-order waves only] SeaSt_Driver.SeaSt.out with hd_driver.HD.out wave kinematics.
+	a) We are comparing two locations on the Semi structure
+	       JointID   Jointxi     Jointyi     Jointzi
+		i)     3    14.43376    25.00000   -14.00000
+		ii)   20   -18.47520    -6.00000   -17.00000
+	b) need to manually (or with a script) replace the new code's output channel headers with the following line, so that the plotting script finds matching channels
+       
+Replace:      Time                          Wave1Elev                          Wave1Elv1                          Wave1Elv2                          Wave2Elev                          Wave2Elv1                          Wave2Elv2                            FVel1xi                            FVel1yi                            FVel1zi                            FAcc1xi                            FAcc1yi                            FAcc1zi                             FDynP1                            FVel2xi                            FVel2yi                            FVel2zi                            FAcc2xi                            FAcc2yi                            FAcc2zi                             FDynP2
+With   :      Time                          Wave1Elev                          Wave1Elv1                          Wave1Elv2                          Wave2Elev                          Wave2Elv1                          Wave2Elv2                            J1Vxi                              J1Vyi                              J1Vzi                              J1Axi                              J1Ayi                              J1Azi                               J1DynP                            J2Vxi                              J2Vyi                              J2Vzi                              J2Axi                              J2Ayi                              J2Azi                               J2DynP      
+
+	Result: Good match, but not perfect, PASS
+	
+3) Compare 5MW_OC4Semi-second [1st-order + 2nd order waves] SeaSt_Driver.SeaSt.out with hd_driver.HD.out wave kinematics.
+	a) Same setup as 2).
+	Result: Good match, but not perfect, PASS
+
+4) 
