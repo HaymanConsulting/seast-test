@@ -23,4 +23,13 @@ With   :      Time                          Wave1Elev                          W
 	a) Same setup as 2).
 	Result: Good match, but not perfect, PASS
 
-4) 
+4) See runtests.bat and plots.m for the remaining test cases and descriptions
+
+5) From the Test cases in #4, above, examine the various Summary files:  looks good.
+
+Tests which would be helpful, but have not been documented
+----------------------------------------------------------
+A) Run MSL2SWL offset cases
+B) Run cases where SeaState module does not use "default" for the environmental conditions
+C) Run at least 1 simulation for each WaveMod option (1, 1P, 4, are not covered)
+D) Construct input files which force the code to issue error messages because of incompatible input setting.  Make sure the error message print and the program exits.

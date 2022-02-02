@@ -1,4 +1,4 @@
-Seastate driver file for test 01.  
+Seastate driver file for writing the Wave Kinematics for later use in the WaveMod=5 test.  
 Compatible with SeaState v1.00
 FALSE            Echo               - Echo the input file data (flag)
 ---------------------- ENVIRONMENTAL CONDITIONS -------------------------------
@@ -7,11 +7,11 @@ FALSE            Echo               - Echo the input file data (flag)
 200              WtrDpth            - Water depth (m)
 0                MSL2SWL            - Offset between still-water level and mean sea level (m) [positive upward]
 ---------------------- SEASTATE -----------------------------------------------
-"./NRELOffshrBsline5MW_OC4DeepCwindSemi_SeaState.dat" SeaStateInputFile       - Primary SeaState input file name (quoted string)
-"./SeaSt_Driver" OutRootName        - The name which prefixes all SeaState generated files (quoted string)
+"./NRELOffshrBsline5MW_OC4DeepCwindSemi_SeaState_WaveMod5.dat" SeaStateInputFile       - Primary SeaState input file name (quoted string)
+"./WaveData"     OutRootName        - The name which prefixes all SeaState generated files (quoted string)
 0                WrWvKinMod         - Write Wave Kinematics? [0: Do not write any kinematics to file, 1: Write only the (0,0) wave elevations to file, 2: Write the complete wave kinematics to files, no files written if WaveMod=6]
 801              NSteps             - Number of time steps in the simulations (-)
-0.0125           TimeInterval       - TimeInterval for the simulation (sec)
+0.125            TimeInterval       - TimeInterval for the simulation (sec)
 ---------------------- Waves multipoint elevation output ----------------------                                                                                                                
 True             WaveElevSeriesFlag - T/F flag to output the wave elevation field (for movies)
 END of driver input file
